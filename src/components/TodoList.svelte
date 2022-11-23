@@ -21,10 +21,13 @@
     todos.splice(event.detail, 1);
     todos = todos;
   };
+
+  $: todosLenght = todos.length;
 </script>
 
 <main>
   <div class="tl">
+    <h4>Всего дел {todosLenght}</h4>
     <label for="todo-input">Новое дело:</label>
     <input
       on:keydown={addTodoEnter}
